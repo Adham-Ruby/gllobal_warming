@@ -1,0 +1,218 @@
+.carousel-global {
+    width: 100%;
+    position: relative;
+    margin: 3.5rem 0rem 1rem; 
+
+    & .carousel-controls .arrow-control {
+        font-size: 2.3rem;  // need
+        margin: 1.5rem .7rem; 
+        color: $fourth-color;
+        cursor: pointer;
+        background: #222;
+        border-radius: 100%;
+        padding: 10px 14px;
+        box-shadow: 2px 4px 4px 1px rgba(240, 205, 6, .16);
+        @include transition-ease;
+
+        &:hover {
+            box-shadow: 2px 4px 4px 2px rgba(240, 205, 6, .3);
+            transform: translateY(-6.5px);
+        }
+    }
+}
+
+.carousel-global .carousel-controls .disabled {
+    cursor: not-allowed !important;
+    color: rgb(135, 127, 127) !important;
+    box-shadow: 2px 4px 4px 1px rgba(135, 127, 127, .16) !important;
+
+    & {
+        box-shadow: 2px 4px 4px 1px rgba(135, 127, 127, .16) !important;
+        transform: translateY(0) !important;
+    }
+}
+
+.carousel-global .carousel-track {
+    display: flex;
+    align-items: center;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+:root {
+    --carousel-card-width: 30.6%;
+}
+
+.carousel-card {
+    min-width: var(--carousel-card-width); // need
+    height: $carousel-card-height; // need
+    box-shadow: rgba(240, 205, 6, 0.16) 2.5px 3px 6px, rgba(240, 205, 6, 0.23) 3px 3px 6px;
+    background: #222;
+    border-top: 4px solid $fourth-color;
+    padding: 1rem .5rem;
+    margin: 0 16px;
+    display: flex;
+    overflow: visible;
+    flex-direction: column;
+    position: relative;
+    @include transition-ease;
+
+    &:hover {
+        box-shadow: rgba(240, 205, 6, 0.16) 3px 3px 12px, rgba(240, 205, 6, 0.23) 3px 3px 12px;
+    }
+}
+
+.carousel-card .carousel-person-img {
+    position: absolute;
+    width: $carousel-person-img-dimension; // need
+    height: $carousel-person-img-dimension; // need
+    border-radius: 100%;
+    @include horizontal-absolute-center;
+    top: $carousel-person-img-top; // need
+    box-shadow: rgba(240, 205, 6, 0.5) 0px 2px 8px;
+    object-fit: contain;
+    margin: 0 0 .5rem;
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+    @include transition-ease;
+}
+
+.carousel-card:hover .carousel-person-img {
+    -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(0%);
+    box-shadow: rgba(240, 205, 6, 0.5) 0px 2px 14px;
+}
+
+.carousel-card .carousel-h5 {
+    margin-top: 1.5rem;
+    text-align: center;
+    // font-size // maybe-need
+}
+
+.carousel-card .carousel-job-company {
+    width: 100%;
+    position: relative;
+    margin-top: .6rem;
+    margin-bottom: 2rem;
+}
+
+.carousel-h5-1 {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    // font-size // maybe-need
+}
+
+.carousel-card .carousel-job-company .company-img-carousel {
+    width: 65px; // need
+    height: 60px; // need
+    object-fit: contain;
+    position: absolute;
+    margin: 1.7rem 0 2rem; 
+    @include horizontal-absolute-center;
+}
+
+.carousel-card .carousel-text {
+    overflow-y: scroll;
+    text-align: justify;
+    margin-top: 3.5rem;
+    padding: 0px .65rem .4rem 10px;
+    cursor: auto;
+}
+
+.carousel-card .carousel-text p {
+    cursor: auto;
+}
+
+.carousel-text::-webkit-scrollbar {
+    width: 8px;
+    cursor: auto !important;
+    
+    &-track {
+        background-color: transparent;
+        cursor: auto !important;
+    }
+
+    &-thumb {
+        background: #a5a4a4d5;
+        @include transition-ease;
+        cursor: auto !important;
+        border-radius: 40px;
+
+        &:hover {
+            cursor: auto !important;
+            background: #a5a4a4;
+        }
+    }
+
+    &-button {
+        background: transparent;
+        height: $carousel-scrollbar-button-height; // need
+    }
+}
+
+// repsonsive part of the carousel
+
+@media screen and (max-width: 450px) {
+    :root {
+        --carousel-card-width: 90%;
+    }
+}
+
+@media screen and (min-width: 450.5px) and (max-width: 530px) {
+    :root {
+        --carousel-card-width: 93%;
+    }
+}
+
+// 515
+
+@media screen and (min-width: 530.5px) and (max-width: 635px) {
+    :root {
+        --carousel-card-width: 44.5%;
+    }
+}
+
+@media screen and (min-width: 635.5px) and (max-width: 890px) {
+    :root {
+        --carousel-card-width: 45.5%;
+    }
+}
+
+@media screen and (min-width: 890.5px) and (max-width: 930px) {
+    :root {
+        --carousel-card-width: 46%;
+    }
+}
+
+@media screen and (min-width: 930.5px) and (max-width: 1024px) {
+    :root {
+        --carousel-card-width: 30.1%;
+    }
+}
+
+@media screen and (min-width: 1024.5px) and (max-width: 1300px) {
+    :root {
+        --carousel-card-width: 30.5%;
+    }
+}
+
+@media screen and (min-width: 1300.5px) and (max-width: 1440px) {
+    :root {
+        --carousel-card-width: 31%;
+    }
+}
+
+@media screen and (min-width: 1441px) {
+    :root {
+        --carousel-card-width: 31.2%;
+    }
+}
+
+@media screen and (min-width: 2560px) {
+    :root {
+        --carousel-card-width: 32%;
+    }
+}

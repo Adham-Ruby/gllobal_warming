@@ -1,0 +1,65 @@
+@import './variablesAndMixins'; 
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+html {
+    height: 100%;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    min-height: 100%;
+    display: flex;
+    overflow-x: hidden;
+    flex-direction: column;
+}
+
+::selection {
+    background: $third-color;
+    color: $secondary-color;
+}
+
+html::-webkit-scrollbar {
+    width: 12px;
+    
+    &-track {
+        background-color: lighten(#4e4e4e, 60%);
+        // margin-bottom: 10px;
+    }
+
+    &-thumb {
+        background: #4e4e4e;
+
+        &:hover {
+            background: lighten(#4e4e4e, 3%);
+        }
+    }
+}
+
+@mixin media-md {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
+@mixin media-lg {
+    @media screen and (max-width: 1024px) {
+        @content;
+    }
+}
+@mixin media-xl {
+    @media screen and (max-width: 1600px) {
+        @content;
+    }
+}
+@mixin media-sm {
+    @media screen and (max-width: 767.9px) {
+        @content;
+    }
+}

@@ -1,0 +1,227 @@
+@media screen and (max-width: 475px) {
+    .countdown-heading {
+        margin-left: .3rem;
+        background-image: linear-gradient(90deg, rgba(212,175,55,1) 0%, rgba(0,0,0,1) 100%);
+        -webkit-background-clip: text;
+        text-align: center;
+        -webkit-text-fill-color: transparent; 
+        -moz-text-fill-color: transparent;
+        @include transition-ease;
+    
+        &:hover {
+            transform: translateX(0);
+        }
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .marquee-global {
+        padding: 21px 18px;
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .global-video-img {
+        display: flex;
+        justify-content: center;
+    }
+
+    .video-img {
+        margin: 15px 0 17px;  
+    }
+
+    .form-container {
+        padding: 18px 12px;
+    }
+}
+
+@include media-md {
+      .con-1 {
+          margin-top: 5.5rem;
+      }
+
+    .nav-container .logo .nav-img {
+        width: 55px;
+        height: 55px;
+    }
+
+    #main-heading {
+        font-size: 1.5rem;
+
+        &:hover {
+            font-size: 1.58rem;
+        }
+    }
+
+    .progress, .progress-highlight {
+        top: 74px;
+    }
+
+    .line-light span::after, .line-light span::before, .line-dark span::before, .line-dark span::after {
+        flex-grow: .175;
+    }
+
+    .form-icon, .back-to-top-btn {
+        font-size: 2rem;
+        padding: 10px;
+    }
+
+    .form-container.scroll-move {
+        right: 5.8rem;
+    }
+
+    .form-icon.scroll-move {
+        right: 6.2rem;
+    }
+
+    .form-container {
+        right: 1.6rem;
+        bottom: 5.5rem;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .def-img, .conseq-img {
+        width: 340px;
+        height: 340px;
+    }
+
+    .video-ex {
+        width: 560px * 1.2;
+        height: 315px * 1.2;
+    }
+
+    .card-global-container .my-card {
+        width: auto;
+        margin: .6rem;
+    }
+
+    #card-3 {
+        margin-bottom: 2rem;
+    }
+
+    #card-1 {
+        transition: background .3s, opacity .4s .5s, transform .8s .5s;
+    }
+    
+    #card-2 {
+        transition: background .3s, opacity .4s .7s, transform .8s .7s;
+    }
+    
+    #card-3 {
+        transition: background .3s, opacity .4s .9s, transform .8s .9s;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .con-1 {
+        margin-top: 6.2 rem;
+    }
+
+    .video-ex {
+        width: 560px * 0.7;
+        height: 315px * 0.7;
+    }
+
+    .line-light span::after, .line-light span::before, .line-dark span::before, .line-dark span::after {
+        flex-grow: .3;
+    }
+
+    #card-1 {
+        transition: background .3s, opacity .4s .5s, transform .8s .5s;
+    }
+    
+    #card-2 {
+        transition: background .3s, opacity .4s .7s, transform .8s .7s;
+    }
+    
+    #card-3 {
+        transition: background .3s, opacity .4s .8s, transform .8s .8s;
+    }
+}
+
+@media screen and (max-width: 445px) {
+    #subj-input {
+        display: none;
+    }
+
+    .form-container {
+        bottom: 4.4rem;
+        right: .8rem;
+    }
+
+    .form-icon {
+        bottom: 1.2rem;
+        right: 1.2rem;
+    }
+
+    .back-to-top-btn {
+        bottom: 5.3rem;
+    }
+
+    .form-container.scroll-move {
+        right: .8rem;
+    }
+
+    .form-icon.scroll-move {
+        right: 1.2rem;
+    }
+
+    .back-to-top-btn.scroll-top {
+        right: 1.3rem;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .menu-nav, .upper-nav {
+        z-index: 13;
+    }
+
+    .menu-btn {
+        z-index: 14;
+    }
+
+    .form-container {
+        z-index: 12;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .def-img ,.conseq-img {
+        width: 290px;
+        height: 290px;
+    }
+
+    .line-light span::after, .line-light span::before, .line-dark span::before, .line-dark span::after {
+        flex-grow: .35;
+    }
+
+    .form-container {
+        width: 90%;
+    }
+
+    .nav-container .logo .nav-img {
+        width: 45px;
+        height: 45px;
+    }
+
+    #main-heading {
+        font-size: 1.3rem;
+
+        &:hover {
+            font-size: 1.38rem;
+        }
+    }
+
+    .progress, .progress-highlight {
+        top: 64px;
+    }
+}
+
+@media screen and (max-width: 308px) {
+    .def-img ,.conseq-img {
+        width: 270px;
+        height: 270px;
+    }
+}

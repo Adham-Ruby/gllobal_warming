@@ -1,0 +1,53 @@
+// varaibles 
+
+$gradient-opacity: 0.4;
+
+$img-dimension: 75px;
+
+$def-dimension: 400px;
+$primary-color: #fff;
+$secondary-color: #000;
+$third-color: rgba(255, 217, 0, 0.72);
+$fourth-color: #d4af37;
+$dropdown-bg: $fourth-color;
+$dropdown-bg-hover: #e1b831;
+$text-precent-gradient: 75%;
+$gradient-text: linear-gradient(90deg, $third-color $text-precent-gradient, $secondary-color $text-precent-gradient); 
+$gradient-text-scroll: linear-gradient(90deg, $primary-color $text-precent-gradient, $secondary-color $text-precent-gradient); 
+$preload-position: 30px;
+$load-position: 0px;
+$transition-delay: (1s * 0.1s); 
+$position-left-before-scroll: 25%;
+$marquee-img-dimension: 250px;
+$border-counter-radius: 8%;
+
+// carousel variables
+
+// $carousel-card-width: 31%;
+$carousel-card-height: 360px;
+
+$carousel-person-img-dimension: 75px;
+$carousel-person-img-top: -45px;
+$carousel-company-img-dimension: 70px; 
+$carousel-scrollbar-button-height: 11px;
+
+// mixins
+
+@mixin transition-ease {
+    transition: all .4s ease;
+}
+
+@mixin transition-up {
+    transition: transform .8s, opacity .8s;
+}
+
+@mixin transition-dropmenu {
+    transition: all .2s;
+}
+
+@mixin horizontal-absolute-center {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+// functions

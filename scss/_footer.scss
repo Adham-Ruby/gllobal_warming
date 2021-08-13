@@ -1,0 +1,127 @@
+footer {
+    background: #111;
+    padding: 21px;
+    color: $primary-color;
+
+    & span a {
+        color: $fourth-color;
+        text-decoration: none;
+        @include transition-ease;
+
+        &:hover {
+            color: lighten($fourth-color, 10%);
+            text-decoration: underline;
+        }
+    }
+}
+
+.form-container {
+    background: #222;
+    z-index: 14;
+    color: $primary-color;
+    padding: 26px 20px;
+    position: fixed;
+    bottom: 6.255rem;
+    right: 2rem;
+    border-radius: 2%;
+    margin-bottom: 1.5rem;
+    @include transition-ease;
+    transform: scale(0);
+    opacity: 0;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    &:hover {
+        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    }
+
+    & .triangle-bottom {
+        position: fixed;
+        width: 0;
+        height: 0;
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        border-top: 40px solid #222;
+        z-index: -1;
+        bottom: -1.25rem;
+        right: .855rem;
+    }
+
+    & .form-heading {
+        margin-bottom: .9rem;
+    }
+
+    & .form-text {
+        text-align: justify;
+        display: block;
+        margin-bottom: .8rem;
+        color: $primary-color;
+    }
+
+    & .close-form-icon {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        transform: translateY(-12px);
+        color: $fourth-color;
+        cursor: pointer;
+        float: right;
+        @include transition-ease;
+
+        &:hover {
+            color: lighten($fourth-color, 10%);
+        }
+    }
+
+    &.scroll-move {
+        right: 7.4rem;
+    }
+}
+
+.form-submit-btn {
+    float: right;
+    @include transition-ease;
+}
+
+.form-icon {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    opacity: .9;
+    color: $fourth-color;
+    font-size: 2.5rem;
+    cursor: pointer;
+    background: rgba(17, 17, 17, 0.903);
+    padding: 13px;
+    border-radius: 10%;
+    @include transition-ease;
+
+    &:hover {
+        opacity: 1;
+        transform: scale(.88);
+    }
+
+    &.scroll-move {
+        right: 7.4rem;
+    }
+}
+
+.back-to-top-btn {
+    font-size: 2.5rem;
+    color: $fourth-color;
+    position: fixed;
+    bottom: 2rem;
+    right: -4rem;
+    opacity: .9;
+    cursor: pointer;
+    background: rgba(17, 17, 17, 0.903);
+    padding: 13px;
+    border-radius: 10%;
+    @include transition-ease;
+
+    &:hover {
+        opacity: 1;
+        transform: scale(.88);
+    }
+
+    &.scroll-top {
+        right: 2rem;
+    }
+}

@@ -1,0 +1,71 @@
+.countdown-heading {
+    margin-left: .3rem;
+    text-decoration: underline;
+    // text-align: justify;
+    @include transition-ease;
+
+    &:hover {
+        transform: translateX(20px);
+        background-image: linear-gradient(90deg, rgba(212,175,55,1) 0%, rgba(0,0,0,1) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent; 
+        -moz-text-fill-color: transparent;
+    }
+}
+
+.counterdown-global {
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+    
+    & p {
+        font-size: 2rem;
+        margin: .6rem .7rem;
+    }
+
+    & .count-btn {
+        position: absolute;
+        @include horizontal-absolute-center;
+        @include transition-ease;
+    }
+}
+
+.display-block {
+    display: block !important;
+    text-align: center;
+}
+
+.time-txt {
+    flex-direction: column;
+    margin: .6rem 1rem;
+    color: $primary-color;
+    background: #222;
+    width: 9.5rem;
+    border-radius: $border-counter-radius;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    @include transition-ease;
+
+    &:hover {
+        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    }
+
+    & .time {
+        border-top-right-radius: $border-counter-radius;
+        border-top-left-radius: $border-counter-radius;
+        min-width: 100%;
+        background: #222;
+        font-weight: 700;
+        padding: 18px;
+        font-size: 4rem;
+    }
+
+    &  .count-txt {
+        border-bottom-right-radius: $border-counter-radius;
+        border-bottom-left-radius: $border-counter-radius;
+        min-width: 100%;
+        background: #111;
+        padding: 18px;
+        font-weight: 500;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+    }
+}
