@@ -91,7 +91,7 @@ html::-webkit-scrollbar-thumb:hover {
   -webkit-transform: translateX(-50%) scale(0.6);
           transform: translateX(-50%) scale(0.6);
   min-width: 225px;
-  z-index: 1;
+  z-index: 3;
   background: #d4af37;
   -webkit-transition: all .3s ease-in;
   transition: all .3s ease-in;
@@ -242,7 +242,7 @@ html::-webkit-scrollbar-thumb:hover {
   position: fixed;
   top: 94px;
   left: 0;
-  z-index: 8;
+  z-index: 1;
   border-radius: 0%;
 }
 
@@ -252,7 +252,7 @@ html::-webkit-scrollbar-thumb:hover {
   transition: width 0.15s linear;
   background: #02c29fd9;
   height: 100%;
-  z-index: 8;
+  z-index: 1;
   top: 94px;
   width: 0%;
 }
@@ -291,6 +291,9 @@ html::-webkit-scrollbar-thumb:hover {
     overflow: auto;
     -webkit-transition: all .4s ease;
     transition: all .4s ease;
+  }
+  .menu-nav::-webkit-scrollbar {
+    display: none;
   }
   .menu-nav.open {
     -webkit-transform: translateX(0);

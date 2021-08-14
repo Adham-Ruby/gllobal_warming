@@ -308,3 +308,13 @@ closeNavIcon.onclick = () => {
     menuNav.classList.remove('open');
     burgerIconX.classList.remove('openX');
 }
+
+let navLinks = document.querySelectorAll('.nav-link');
+
+navLinks.forEach(link => {
+    link.onclick = () => {
+        clickBurgerIcon++;
+        menuNav.classList.remove('open');
+        burgerIconX.classList.remove('openX');
+    }
+});
