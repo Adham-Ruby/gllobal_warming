@@ -279,16 +279,6 @@ globalDropDowns.forEach((item, index) => {
     }
 });
 
-// globalDropDowns[0].addEventListener('click', () => {
-//     dropItems[0].classList.toggle('show-drop');
-//     arrNavDowns[0].classList.toggle('rotate-top');
-// });
-
-// globalDropDowns[1].onclick = () => {
-//     dropItems[1].classList.toggle('show-drop');
-//     arrNavDowns[1].classList.toggle('rotate-top');
-// }
-
 // burger clicked
 
 let menuNav = document.querySelector('.menu-nav'),
