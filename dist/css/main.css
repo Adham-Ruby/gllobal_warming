@@ -960,13 +960,21 @@ footer span a:hover {
   right: 2rem;
   border-radius: 2%;
   margin-bottom: 1.5rem;
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+  opacity: 0;
+  pointer-events: none;
   -webkit-transition: all .4s ease;
   transition: all .4s ease;
-  -webkit-transform: scale(0);
-          transform: scale(0);
-  opacity: 0;
   -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
           box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.form-container.open {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  pointer-events: auto;
 }
 
 .form-container:hover {

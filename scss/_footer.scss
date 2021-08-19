@@ -25,10 +25,18 @@ footer {
     right: 2rem;
     border-radius: 2%;
     margin-bottom: 1.5rem;
-    @include transition-ease;
-    transform: scale(0);
+    transform: scale(0.5);
     opacity: 0;
+    pointer-events: none;
+    @include transition-ease;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+    &.open {
+        opacity: 1;
+        transform: scale(1);
+        pointer-events: auto;
+    }
+
     &:hover {
         box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
     }

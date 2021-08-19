@@ -254,11 +254,9 @@ window.onscroll = function() {
 formIcon.addEventListener('click', () => {
     clickIcon ++;
     if (clickIcon % 2 == 0) {
-        formContainer.style.transform = "scale(0.5)";
-        formContainer.style.opacity = 0;
+        formContainer.classList.remove('open');
     } else {
-        formContainer.style.transform = "scale(1)";
-        formContainer.style.opacity = 1;
+        formContainer.classList.add('open');
     }
 });
 
