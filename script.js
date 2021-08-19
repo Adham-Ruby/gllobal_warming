@@ -262,8 +262,7 @@ formIcon.addEventListener('click', () => {
 
 closeForm.addEventListener('click', () => {
     clickIcon ++;
-    formContainer.style.transform = "scale(0.5)";
-    formContainer.style.opacity = 0;
+    formContainer.classList.remove('open');
 });
 
 // side nav bar on click drop down menu appear
