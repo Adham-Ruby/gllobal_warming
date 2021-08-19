@@ -272,15 +272,22 @@ let globalDropDowns = document.querySelectorAll('.global-dropmenu'),
 dropItems = document.querySelectorAll('.dropdown-items'),
 arrNavDowns = document.querySelectorAll('.arr-nav-down');
 
-globalDropDowns[0].addEventListener('click', () => {
-    dropItems[0].classList.toggle('show-drop');
-    arrNavDowns[0].classList.toggle('rotate-top');
+globalDropDowns.forEach((item, index) => {
+    item.onclick = () => {
+        dropItems[index].classList.toggle('show-drop');
+        arrNavDowns[index].classList.toggle('rotate-top'); 
+    }
 });
 
-globalDropDowns[1].onclick = () => {
-    dropItems[1].classList.toggle('show-drop');
-    arrNavDowns[1].classList.toggle('rotate-top');
-}
+// globalDropDowns[0].addEventListener('click', () => {
+//     dropItems[0].classList.toggle('show-drop');
+//     arrNavDowns[0].classList.toggle('rotate-top');
+// });
+
+// globalDropDowns[1].onclick = () => {
+//     dropItems[1].classList.toggle('show-drop');
+//     arrNavDowns[1].classList.toggle('rotate-top');
+// }
 
 // burger clicked
 
