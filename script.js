@@ -149,12 +149,14 @@ function matchingMedia() {
         maxMove = (carouselCards.length - 1) * movePer;
     } else if (tablet_view.matches) {
         maxMove = (carouselCards.length - 2) * movePer;
-    }    
+    } else {
+        maxMove = (carouselCards.length - 3) * movePer;
+    }
 }
 
 function moveMeasuring() {
-    movePer = (carouselCards[0].offsetWidth) + 32,
-    maxMove = (carouselCards.length - 3) * movePer;
+    let marginX = parseFloat(getComputedStyle(carouselCards[0]).marginRight) * 2;
+    movePer = carouselCards[0].offsetWidth + marginX;
     matchingMedia();
 }
 
