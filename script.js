@@ -189,7 +189,7 @@ leftArr.addEventListener("click", () => {
 
 // "Nov 12, 2021 10:30:00"
 
-let countDownDate = new Date("Nov 12, 2021 10:30:00").getTime(),
+let countDownDate = new Date("Nov 12, 2023 10:30:00").getTime(),
 counterDownGlobal = document.querySelector('.counterdown-global');
 
 counterDownGlobal.innerHTML = `<div class="time-txt d-flex justify-content-center">
